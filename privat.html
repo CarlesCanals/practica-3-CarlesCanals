@@ -2,47 +2,30 @@
 <html lang="ca">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pàgina Privada</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <link rel="stylesheet" href="css/estils.css">
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <title>Zona privada</title>
+
+    <!-- Skeleton CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <header class="navbar">
-        <div class="navbar-inner">
-            <div class="logo">
-                <img src="https://avatars.githubusercontent.com/u/114033801?v=4" alt="Logo app">
-                <h1>Registre d'Usuaris</h1>
-            </div>
-            <nav>
-                <a href="login.html">Inici</a>
-                <a href="#registre">Registre</a>
-                <a href="#ajuda">Ajuda</a>
-            </nav>
-        </div>
-    </header>
+<div class="container">
+    <h1>Zona privada</h1>
 
-    <main>
-        <section class="description">
-            <h4>Pàgina privada</h4>
-            <p>
-                Aquesta secció és privada i només accessible per usuaris autenticats. Aquí pots mostrar contingut restringit, informació personal o funcionalitats exclusives.
-            </p>
-        </section>
-        <div class="login-wrapper">
-            <div class="login-container">
-                <h3>Benvingut a la zona privada</h3>
-                <p style="text-align:center; margin-top:20px;">Has accedit correctament a la pàgina privada.</p>
-            </div>
-        </div>
-    </main>
+    <p>Benvingut/da a la zona privada del sistema de gestió d'usuaris.</p>
 
-    <footer>
-        &copy; 2025 Registre d'Usuaris | Desenvolupat per Carles Canals
-    </footer>
-</body>
-</html>
+    <!-- Botó de tancament de sessió -->
+    <button id="btn-logout" class="button button-primary">
+        Tanca sessió
+    </button>
+
+    <p id="user-info"></p>
+</div>
+
+<script src="privat.js"></script>
+
 <script>
     function obtenirUsuariAutenticat() {
         const dades = localStorage.getItem("usuariAutenticat");
@@ -58,3 +41,6 @@
         console.log("Usuari autenticat: ", usuari.email, "Rol: ", usuari.role);
     }
 </script>
+
+</body>
+</html>
