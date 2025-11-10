@@ -15,20 +15,36 @@
         .navbar {
             background: rgba(44, 62, 80, 0.95);
             color: #fff;
-            padding: 16px 0;
+            height: 50px;
+            min-height: 50px;
+            max-height: 50px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
             z-index: 10;
+            padding: 0;
         }
         .navbar .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            height: 100%;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .navbar .logo img {
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.10);
         }
         .navbar h1 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             letter-spacing: 1px;
         }
         .navbar nav a {
@@ -37,6 +53,7 @@
             margin-left: 24px;
             font-weight: 500;
             transition: color 0.2s;
+            font-size: 1rem;
         }
         .navbar nav a:hover {
             color: #ffd700;
@@ -89,7 +106,10 @@
     <body>
         <header class="navbar">
             <div class="container">
-                <h1>Registre d'Usuaris</h1>
+                <div class="logo">
+                    <img src="https://avatars.githubusercontent.com/u/114033801?v=4" alt="Logo app">
+                    <h1>Registre d'Usuaris</h1>
+                </div>
                 <nav>
                     <a href="#">Inici</a>
                     <a href="#registre">Registre</a>
