@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre d'Usuari Nou</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <style>
+        .error { color: red; margin-top: 10px; }
+        .success { color: green; margin-top: 10px; }
+        .container { max-width: 400px; margin: 40px auto; }
+    </style>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+</head>
+<body>
+    <div class="container">
+            <section>
+                <h4>Descripció del projecte</h4>
+                <p>
+                    Aquesta aplicació permet el registre d'usuaris mitjançant un formulari amb camps de correu electrònic i contrasenya. Les dades es validen i es desen localment, simulant la persistència a un arxiu <code>users.json</code>. Si el correu ja existeix o el format no és correcte, es mostra un missatge d'error.
+                </p>
+            </section>
+        <h3>Registre d'usuari nou</h3>
+        <form id="registerForm">
+            <label for="email">Correu electrònic</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Contrasenya</label>
+            <input type="password" id="password" name="password" required>
+            <!-- Turnstile -->
+            <div class="cf-turnstile"
+                data-sitekey="0x4AAAAAAB_-v0PPzLXccak0">
+            </div>
+            <button class="button-primary" type="submit">Registrar</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
