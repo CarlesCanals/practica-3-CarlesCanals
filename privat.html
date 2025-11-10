@@ -1,0 +1,15 @@
+<script>
+    function obtenirUsuariAutenticat() {
+        const dades = localStorage.getItem("usuariAutenticat");
+        return dades ? JSON.parse(dades) : null;
+    }
+
+    const usuari = obtenirUsuariAutenticat();
+
+    if (!usuari) {
+        // Si no hi ha usuari, redirigim al login
+        window.location.href = "login.html";
+    } else {
+        console.log("Usuari autenticat: ", usuari.email, "Rol: ", usuari.role);
+    }
+</script>

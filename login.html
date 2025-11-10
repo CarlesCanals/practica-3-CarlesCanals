@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Inici de sessió</title>
+
+    <!-- Skeleton CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container">
+    <h1>Inici de sessió</h1>
+
+    <form id="login-form">
+        <label for="email">Correu electrònic</label>
+        <input class="u-full-width"
+               type="email"
+               id="email"
+               name="email"
+               placeholder="elmeuemail@example.com"
+               required>
+
+        <label for="password">Contrasenya</label>
+        <input class="u-full-width"
+               type="password"
+               id="password"
+               name="password"
+               placeholder="Introdueix la contrasenya"
+               required>
+
+        <!-- Aquí mostrarem els errors -->
+        <p id="login-error" style="color: red; min-height: 1.2em;"></p>
+
+        <button type="submit" class="button-primary">Inicia sessió</button>
+    </form>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>
