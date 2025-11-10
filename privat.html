@@ -1,3 +1,31 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Zona privada</title>
+
+    <!-- Skeleton CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container">
+    <h1>Zona privada</h1>
+
+    <p>Benvingut/da a la zona privada del sistema de gestió d'usuaris.</p>
+
+    <!-- Botó de tancament de sessió -->
+    <button id="btn-logout" class="button button-primary">
+        Tanca sessió
+    </button>
+
+    <p id="user-info"></p>
+</div>
+
+<script src="privat.js"></script>
+
 <script>
     function obtenirUsuariAutenticat() {
         const dades = localStorage.getItem("usuariAutenticat");
@@ -13,3 +41,6 @@
         console.log("Usuari autenticat: ", usuari.email, "Rol: ", usuari.role);
     }
 </script>
+
+</body>
+</html>
